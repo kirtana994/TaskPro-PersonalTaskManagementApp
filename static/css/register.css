@@ -1,0 +1,455 @@
+/* ========================================
+   TASKPRO — REGISTER PAGE
+   Shared styles: style.css
+   Reusable components: components.css
+   ======================================== */
+
+/* ---------- PAGE ---------- */
+
+.register-page {
+    min-height: 100vh;
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+/* ---------- NAVIGATION ---------- */
+/* Uses the same navbar design as Welcome. */
+
+.register-navbar {
+    position: relative;
+    z-index: 10;
+    padding: 18px 0;
+    background: rgba(253, 251, 240, 0.94);
+    border-bottom: 2px dashed #E8DFAF;
+}
+
+.register-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.register-navbar .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--dark);
+}
+
+.register-navbar .brand:hover {
+    color: var(--dark);
+}
+
+.register-navbar .brand-icon {
+    color: var(--orange);
+    font-size: 27px;
+}
+
+.register-navbar .brand-dot {
+    margin-left: -7px;
+    color: var(--coral);
+}
+
+.register-nav-link {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.register-nav-link span {
+    margin-left: 4px;
+    color: #B56A2D;
+}
+
+.register-nav-link:hover {
+    color: #B56A2D;
+}
+
+/* ---------- PAGE LAYOUT ---------- */
+
+.register-main {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 82px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 18px 30px;
+}
+
+/* ---------- REGISTRATION CARD ---------- */
+
+.register-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 460px;
+    overflow: hidden;
+    border: 2px solid #EEE4B8;
+    border-radius: 30px;
+    background: var(--white);
+    box-shadow: 0 12px 0 rgba(221, 200, 78, 0.22);
+}
+
+/* ---------- ILLUSTRATION ---------- */
+
+.register-illustration {
+    position: relative;
+    display: flex;
+    min-height: 155px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--butter);
+}
+
+/* Reusable blob */
+
+.register-sun {
+    position: absolute;
+    top: -72px;
+    left: 50%;
+    width: 260px;
+    height: 220px;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Keep the blob behind the illustration content. */
+
+.register-sun .tp-blob {
+    width: 100%;
+    height: 100%;
+}
+
+/* Reusable duck */
+
+.register-duck {
+    position: relative;
+    z-index: 2;
+    width: 115px;
+    height: 110px;
+    flex-shrink: 0;
+    transform: rotate(-5deg);
+}
+
+.register-duck .tp-duck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.05);
+    transform-origin: top left;
+}
+
+/* Reusable flower */
+
+.register-flower {
+    position: absolute;
+    z-index: 2;
+    top: 23px;
+    left: 40px;
+    transform: rotate(-12deg);
+}
+
+/* Sticker */
+
+.register-sticker {
+    position: absolute;
+    z-index: 2;
+    right: 19px;
+    bottom: 17px;
+    padding: 8px 12px;
+    border: 1px dashed #D9A99B;
+    background: #F8DEDA;
+    color: #9A5C50;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transform: rotate(5deg);
+}
+
+/* ---------- FORM CONTENT ---------- */
+
+.register-card-content {
+    padding: 28px 34px 26px;
+}
+
+.register-eyebrow {
+    margin-bottom: 9px;
+    color: #A36E29;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.register-card h1 {
+    margin-bottom: 9px;
+    color: var(--dark);
+    font-family: "Fredoka", sans-serif;
+    font-size: 39px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.register-card h1 span {
+    color: #B56A2D;
+}
+
+.register-description {
+    max-width: 320px;
+    margin: 0 auto 22px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ---------- FORM FIELDS ---------- */
+
+.register-card .mb-3 {
+    margin-bottom: 15px !important;
+}
+
+.register-card .form-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.register-card .form-control {
+    min-height: 46px;
+    padding: 11px 14px;
+    border: 1.5px solid #E8DFC2;
+    border-radius: 13px;
+    background: #FFFEF9;
+    color: var(--dark);
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.register-card .form-control::placeholder {
+    color: #AAA394;
+    font-weight: 600;
+}
+
+.register-card .form-control:focus {
+    border-color: #D6BE4B;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(242, 225, 106, 0.25);
+}
+
+.register-card .form-control.is-invalid {
+    border-color: #D96C67;
+}
+
+.register-card .form-control.is-valid {
+    border-color: var(--green);
+}
+
+.register-card .invalid-feedback {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ---------- REGISTRATION BUTTON ---------- */
+
+.register-submit {
+    display: flex;
+    min-height: 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 50px;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    box-shadow: 0 5px 0 #DDC84E;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.register-submit:hover {
+    border: 0;
+    background: #F6E778;
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #DDC84E;
+}
+
+.register-submit:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #DDC84E;
+}
+
+.register-submit:focus-visible {
+    outline: 3px solid rgba(214, 190, 75, 0.6);
+    outline-offset: 4px;
+}
+
+.register-submit span {
+    display: inline-block;
+    font-size: 19px;
+    transition: transform 0.2s ease;
+}
+
+.register-submit:hover span {
+    transform: translateX(4px);
+}
+
+/* ---------- API MESSAGES ---------- */
+
+.register-card #message:not(:empty) {
+    margin-bottom: 15px;
+    padding: 11px 13px;
+    border-radius: 11px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* ---------- LOGIN LINK ---------- */
+
+.register-login {
+    margin: 21px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.register-login a {
+    color: #A65F28;
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.register-login a:hover {
+    color: var(--coral);
+}
+
+/* ---------- FOOTER NOTE ---------- */
+
+.register-footer-note {
+    margin: 22px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.register-footer-note span {
+    color: var(--coral);
+}
+
+/* ---------- BACKGROUND SPARKLES ---------- */
+
+.register-sparkle {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.register-sparkle-left {
+    top: 16%;
+    left: calc(50% - 310px);
+    transform: rotate(-12deg);
+}
+
+.register-sparkle-right {
+    right: calc(50% - 310px);
+    bottom: 19%;
+    transform: rotate(12deg);
+}
+
+/* ---------- RESPONSIVE LAYOUT ---------- */
+
+@media (max-width: 575.98px) {
+
+    .register-navbar {
+        padding: 14px 0;
+    }
+
+    .register-navbar .brand {
+        font-size: 24px;
+    }
+
+    .register-navbar .brand-icon {
+        font-size: 23px;
+    }
+
+    .register-main {
+        min-height: calc(100vh - 70px);
+        padding: 25px 15px 24px;
+    }
+
+    .register-card {
+        max-width: 400px;
+        border-radius: 25px;
+    }
+
+    .register-illustration {
+        min-height: 135px;
+    }
+
+    .register-card-content {
+        padding: 25px 22px 23px;
+    }
+
+    .register-card h1 {
+        font-size: 34px;
+    }
+
+    .register-description {
+        margin-bottom: 20px;
+    }
+
+    .register-card .mb-3 {
+        margin-bottom: 13px !important;
+    }
+
+    .register-sticker {
+        right: 10px;
+        bottom: 11px;
+        font-size: 8px;
+    }
+
+    .register-flower {
+        left: 20px;
+    }
+
+    .register-sparkle-left {
+        top: 5%;
+        left: 4%;
+    }
+
+    .register-sparkle-right {
+        right: 4%;
+        bottom: 7%;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .register-submit,
+    .register-submit span {
+        transition: none;
+    }
+}

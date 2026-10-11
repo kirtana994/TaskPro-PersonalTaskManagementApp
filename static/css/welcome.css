@@ -1,0 +1,818 @@
+/* ========================================
+   TASKPRO — WELCOME PAGE STYLES
+   Shared styles: style.css
+   Reusable components: components.css
+   ======================================== */
+
+/* ---------- PAGE ---------- */
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* ---------- BACKGROUND SPARKLES ---------- */
+
+.background-sparkle {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.sparkle-one {
+    top: 175px;
+    left: 4%;
+    transform: rotate(-12deg);
+}
+
+.sparkle-two {
+    top: 370px;
+    right: 4%;
+}
+
+.sparkle-three {
+    top: 660px;
+    left: 8%;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.planner-navbar {
+    position: relative;
+    z-index: 10;
+    background: rgba(253, 251, 240, 0.94);
+    border-bottom: 2px dashed #E8DFAF;
+}
+
+.planner-navbar .nav-link {
+    color: var(--dark);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.planner-navbar .nav-link:hover {
+    color: #B66C25;
+}
+
+.planner-navbar .navbar-toggler {
+    border: 1px solid #E3D79B;
+    border-radius: 13px;
+    padding: 7px 10px;
+}
+
+.planner-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(242, 225, 106, 0.4);
+}
+
+.nav-cta {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+    padding: 82px 0 95px;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 15px;
+    background: var(--soft-yellow);
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+}
+
+.eyebrow-flower {
+    flex-shrink: 0;
+}
+
+.hero-section h1 {
+    position: relative;
+    margin-top: 24px;
+    font-size: clamp(54px, 6.5vw, 83px);
+    line-height: 0.99;
+    font-weight: 700;
+    letter-spacing: -2.5px;
+}
+
+.highlight-heading {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    color: #B56A2D;
+}
+
+.highlight-heading::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -3px;
+    right: -8px;
+    bottom: 3px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gold);
+    transform: rotate(-2deg);
+}
+
+.heading-sparkle {
+    vertical-align: top;
+    margin-left: 7px;
+    transform: rotate(12deg);
+}
+
+.hero-description {
+    max-width: 490px;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: 600;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 23px;
+    margin-top: 28px;
+}
+
+.hero-actions .btn {
+    font-size: 16px;
+}
+
+.login-link {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 800;
+    border-bottom: 2px dashed #D9C97E;
+    padding-bottom: 4px;
+}
+
+.login-link:hover {
+    color: #B56A2D;
+}
+
+.hero-note {
+    margin-top: 27px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--muted);
+}
+
+.hero-note span {
+    color: var(--coral);
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+
+/* ---------- PLANNER ILLUSTRATION ---------- */
+
+.planner-illustration {
+    position: relative;
+    min-height: 490px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+
+/* The reusable blob component receives this class. */
+.sun-shape {
+    top: 22px;
+    right: 0;
+    width: 360px;
+    height: 370px;
+    transform: rotate(-9deg);
+}
+
+.planner-sheet {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 370px);
+    padding: 27px 26px 23px;
+    background: var(--soft-yellow);
+    border-radius: 29px 34px 26px 36px;
+    transform: rotate(2deg);
+}
+
+.sheet-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.sheet-kicker {
+    color: #897A3F;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.sheet-heading h2 {
+    margin: 5px 0 0;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.sheet-heading h2 span {
+    color: var(--coral);
+}
+
+.sheet-flower {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #9D7130;
+    font-size: 25px;
+}
+
+.sheet-date {
+    display: inline-block;
+    margin: 19px 0 12px;
+    padding: 6px 10px;
+    background: #FFF9D9;
+    border-radius: 8px;
+    color: #82723A;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+}
+
+.sheet-task {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 47px;
+    border-bottom: 1px dashed #DDCF86;
+}
+
+.task-check {
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border: 1.8px solid #9B8A48;
+    border-radius: 6px;
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.task-check.checked {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.task-text {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: #8B8058;
+}
+
+.task-flower,
+.task-star {
+    color: var(--coral);
+    font-size: 17px;
+}
+
+.task-priority {
+    display: grid;
+    place-items: center;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: #F5C49C;
+    color: #874F28;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.task-heart {
+    color: var(--coral);
+    font-size: 20px;
+}
+
+.sheet-progress {
+    margin-top: 20px;
+}
+
+.progress-copy {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: #766A3E;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.progress-track {
+    height: 9px;
+    margin-top: 9px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #FFF9D9;
+}
+
+.progress-fill {
+    width: 25%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--green);
+}
+
+.sheet-footer {
+    margin-top: 17px;
+    text-align: center;
+    color: #82723A;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ---------- DUCK MASCOT ---------- */
+
+/* Keep this wrapper; the duck itself lives in components/duck.html. */
+.duck-sticker {
+    position: absolute;
+    z-index: 4;
+    top: -12px;
+    right: 10px;
+    width: 108px;
+    height: 105px;
+    transform: rotate(9deg);
+}
+
+
+/* ---------- ILLUSTRATION DECORATIONS ---------- */
+
+.illustration-sparkle {
+    position: absolute;
+    z-index: 3;
+    color: #D99B34;
+    font-size: 28px;
+    pointer-events: none;
+}
+
+.sparkle-a {
+    top: 72px;
+    left: 7px;
+}
+
+.sparkle-b {
+    right: -5px;
+    bottom: 80px;
+    color: var(--coral);
+}
+
+.mini-tape {
+    position: absolute;
+    z-index: 5;
+    top: 70px;
+    left: 6px;
+    padding: 7px 14px;
+    background: #F3B0A1;
+    color: #A45B4D;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transform: rotate(-13deg);
+}
+
+.floating-note {
+    position: absolute;
+    z-index: 5;
+    padding: 10px 14px;
+    border-radius: 13px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 12px;
+    background: var(--white);
+}
+
+.floating-note span {
+    margin-right: 4px;
+}
+
+.note-left {
+    bottom: 43px;
+    left: -7px;
+    color: #8D6428;
+    transform: rotate(-7deg);
+}
+
+.note-right {
+    right: -4px;
+    bottom: 1px;
+    color: #B56867;
+    transform: rotate(5deg);
+}
+
+
+/* ---------- INTRO STRIP ---------- */
+
+.intro-strip {
+    padding: 19px 0;
+    background: var(--butter);
+    text-align: center;
+}
+
+.intro-strip p {
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.intro-strip span {
+    margin: 0 9px;
+    color: #B66C25;
+}
+
+
+/* ---------- FEATURES ---------- */
+
+.feature-section {
+    position: relative;
+    padding: 100px 0 105px;
+}
+
+.section-heading {
+    margin-bottom: 49px;
+}
+
+.section-kicker {
+    color: #A36E29;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.8px;
+}
+
+.section-heading h2 {
+    margin: 15px 0 13px;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.section-heading h2 span {
+    color: #B56A2D;
+}
+
+.section-heading > p {
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.feature-card {
+    position: relative;
+    height: 100%;
+    min-height: 225px;
+    overflow: hidden;
+    padding: 28px 25px;
+    border-radius: 27px 31px 25px 30px;
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px) rotate(-0.5deg);
+}
+
+.feature-yellow {
+    background: #F7EDA8;
+}
+
+.feature-pink {
+    background: #F8DEDA;
+}
+
+.feature-green {
+    background: #E5EFD5;
+}
+
+.feature-peach {
+    background: #F9E5CB;
+}
+
+.feature-lavender {
+    background: #EAE3F6;
+}
+
+.feature-cream {
+    background: #F5EEDB;
+}
+
+.feature-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background: rgba(255, 253, 247, 0.75);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.feature-card h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    position: relative;
+    z-index: 1;
+    max-width: 290px;
+    margin-bottom: 0;
+    color: #655F53;
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.feature-decoration {
+    position: absolute;
+    right: 13px;
+    bottom: -18px;
+    color: rgba(104, 83, 42, 0.12);
+    font-size: 90px;
+    line-height: 1;
+}
+
+
+/* ---------- CALL TO ACTION ---------- */
+
+.cta-section {
+    padding: 0 0 95px;
+}
+
+.cta-card {
+    position: relative;
+    overflow: hidden;
+    padding: 66px 24px;
+    border-radius: 36px;
+    background: var(--gold);
+    text-align: center;
+}
+
+.cta-kicker {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.8px;
+}
+
+.cta-card h2 {
+    max-width: 650px;
+    margin: 17px auto 13px;
+    font-size: clamp(35px, 4.5vw, 53px);
+    font-weight: 600;
+    line-height: 1.12;
+}
+
+.cta-card > p:not(.cta-login) {
+    margin-bottom: 25px;
+    color: #5D5231;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 25px;
+    border: 2px solid var(--dark);
+    border-radius: 50px;
+    background: var(--dark);
+    color: var(--cream);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.cta-button:hover {
+    border-color: #493C2D;
+    background: #493C2D;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.cta-login {
+    margin: 21px 0 0;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.cta-login a {
+    margin-left: 4px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Reusable sparkle components retain these positioning classes. */
+.cta-sparkle {
+    position: absolute;
+    pointer-events: none;
+}
+
+.cta-sparkle-one {
+    top: 24px;
+    left: 9%;
+}
+
+.cta-sparkle-two {
+    right: 9%;
+    bottom: 24px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.planner-footer {
+    padding: 25px 0;
+    border-top: 2px dashed #E8DFAF;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ---------- RESPONSIVE LAYOUT ---------- */
+
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        padding: 65px 0 75px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .planner-illustration {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .sun-shape {
+        right: 20px;
+    }
+
+    .feature-section {
+        padding: 75px 0;
+    }
+
+    .cta-section {
+        padding-bottom: 75px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .hero-section {
+        padding: 49px 0 60px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(48px, 13vw, 66px);
+        letter-spacing: -1.8px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.8px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .planner-illustration {
+        min-height: 415px;
+    }
+
+    .sun-shape {
+        top: 34px;
+        right: 0;
+        width: 92%;
+        height: 320px;
+    }
+
+    .planner-sheet {
+        width: 90%;
+        padding: 22px 19px;
+    }
+
+    .duck-sticker {
+        right: -2px;
+        transform: scale(0.83) rotate(9deg);
+        transform-origin: top right;
+    }
+
+    .mini-tape {
+        left: -2px;
+        top: 61px;
+        font-size: 10px;
+    }
+
+    .floating-note {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+
+    .note-left {
+        left: -2px;
+        bottom: 22px;
+    }
+
+    .note-right {
+        right: -2px;
+        bottom: -5px;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .feature-section {
+        padding: 65px 0;
+    }
+
+    .feature-card {
+        min-height: 205px;
+    }
+
+    .cta-card {
+        padding: 52px 19px;
+        border-radius: 27px;
+    }
+
+    .cta-sparkle-one {
+        left: 5%;
+    }
+
+    .cta-sparkle-two {
+        right: 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

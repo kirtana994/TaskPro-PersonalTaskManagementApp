@@ -1,0 +1,296 @@
+/* =========================================
+   TASKPRO — REUSABLE COMPONENTS
+   ========================================= */
+
+/* ---------- DUCK MASCOT ---------- */
+
+.tp-duck {
+    --duck-yellow: #F5D85E;
+    --duck-outline: #42351D;
+
+    position: relative;
+    width: 108px;
+    height: 105px;
+    display: inline-block;
+}
+
+.tp-duck__body {
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    width: 91px;
+    height: 72px;
+    background: var(--duck-yellow);
+    border: 2px solid var(--duck-outline);
+    border-radius: 54% 48% 48% 52% / 48% 47% 53% 52%;
+}
+
+.tp-duck__wing {
+    position: absolute;
+    left: 12px;
+    top: 30px;
+    width: 35px;
+    height: 24px;
+    background: #F9E58B;
+    border: 2px solid var(--duck-outline);
+    border-radius: 50% 45% 50% 50%;
+    transform: rotate(-15deg);
+}
+
+.tp-duck__eye {
+    position: absolute;
+    top: 21px;
+    right: 22px;
+    width: 6px;
+    height: 8px;
+    background: var(--duck-outline);
+    border-radius: 50%;
+}
+
+.tp-duck__cheek {
+    position: absolute;
+    top: 34px;
+    right: 12px;
+    width: 13px;
+    height: 7px;
+    background: #E99A91;
+    border-radius: 50%;
+}
+
+.tp-duck__beak {
+    position: absolute;
+    top: 30px;
+    right: -12px;
+    width: 21px;
+    height: 13px;
+    background: #F5A03C;
+    border: 2px solid var(--duck-outline);
+    border-radius: 60% 40% 50% 50%;
+    transform: rotate(8deg);
+}
+
+.tp-duck__beret {
+    position: absolute;
+    z-index: 2;
+    top: 3px;
+    left: 24px;
+    width: 44px;
+    height: 17px;
+    background: #E07A78;
+    border: 2px solid var(--duck-outline);
+    border-radius: 70% 45% 30% 35%;
+    transform: rotate(-12deg);
+}
+
+.tp-duck__beret::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 37px;
+    height: 5px;
+    background: #E07A78;
+    border: 2px solid var(--duck-outline);
+    border-radius: 50%;
+}
+
+.tp-duck__foot {
+    position: absolute;
+    bottom: 3px;
+    width: 19px;
+    height: 8px;
+    background: #F5A03C;
+    border: 2px solid var(--duck-outline);
+    border-radius: 50%;
+}
+
+.tp-duck__foot--left {
+    left: 28px;
+}
+
+.tp-duck__foot--right {
+    left: 58px;
+}
+
+.tp-duck__body,
+.tp-duck__wing,
+.tp-duck__eye,
+.tp-duck__cheek,
+.tp-duck__beak,
+.tp-duck__beret,
+.tp-duck__foot {
+    pointer-events: none;
+}
+
+
+/* ---------- FLOWERS ---------- */
+
+.tp-flower {
+    display: inline-block;
+    line-height: 1;
+    color: #E07A78;
+    pointer-events: none;
+}
+
+.tp-flower--coral {
+    color: #E07A78;
+}
+
+.tp-flower--yellow {
+    color: #F2C94C;
+}
+
+.tp-flower--green {
+    color: #7DB34A;
+}
+
+.tp-flower--small {
+    font-size: 18px;
+}
+
+.tp-flower--medium {
+    font-size: 30px;
+}
+
+.tp-flower--large {
+    font-size: 46px;
+}
+
+
+/* ---------- SPARKLES ---------- */
+
+.tp-sparkle {
+    display: inline-block;
+    line-height: 1;
+    color: #F5A03C;
+    pointer-events: none;
+}
+
+.tp-sparkle--orange {
+    color: #F5A03C;
+}
+
+.tp-sparkle--coral {
+    color: #E07A78;
+}
+
+.tp-sparkle--green {
+    color: #7DB34A;
+}
+
+.tp-sparkle--small {
+    font-size: 13px;
+}
+
+.tp-sparkle--medium {
+    font-size: 22px;
+}
+
+.tp-sparkle--large {
+    font-size: 34px;
+}
+
+
+/* ---------- ORGANIC BLOBS ---------- */
+
+.tp-blob {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+    background: #F8F1C4;
+}
+
+.tp-blob--yellow {
+    background: #F8F1C4;
+}
+
+.tp-blob--pink {
+    background: #F8DEDA;
+}
+
+.tp-blob--green {
+    background: #E5EFD5;
+}
+
+.tp-blob--organic {
+    border-radius: 46% 54% 55% 45% / 42% 41% 59% 58%;
+}
+
+.tp-blob--round {
+    border-radius: 50%;
+}
+
+
+/* ---------- DECORATIVE CLUSTER ---------- */
+
+.tp-decorations {
+    position: relative;
+    width: 110px;
+    height: 95px;
+    pointer-events: none;
+}
+
+.tp-decorations__flower,
+.tp-decorations__sparkle {
+    position: absolute;
+    display: inline-block;
+    line-height: 1;
+}
+
+.tp-decorations__flower {
+    color: #E07A78;
+}
+
+.tp-decorations__flower--one {
+    top: 5px;
+    left: 8px;
+    font-size: 30px;
+    transform: rotate(-15deg);
+}
+
+.tp-decorations__flower--two {
+    right: 5px;
+    bottom: 8px;
+    color: #F2C94C;
+    font-size: 22px;
+    transform: rotate(12deg);
+}
+
+.tp-decorations__sparkle {
+    color: #F5A03C;
+}
+
+.tp-decorations__sparkle--one {
+    top: 5px;
+    right: 10px;
+    font-size: 21px;
+}
+
+.tp-decorations__sparkle--two {
+    bottom: 9px;
+    left: 8px;
+    color: #7DB34A;
+    font-size: 17px;
+}
+
+.tp-decorations__sparkle--three {
+    top: 38px;
+    left: 52px;
+    color: #E07A78;
+    font-size: 15px;
+}
+
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .tp-duck,
+    .tp-flower,
+    .tp-sparkle,
+    .tp-blob,
+    .tp-decorations {
+        animation: none !important;
+        transition: none !important;
+    }
+}

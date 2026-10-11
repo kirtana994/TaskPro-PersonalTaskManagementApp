@@ -1,0 +1,370 @@
+/* ========================================
+   TASKPRO — LOGIN PAGE
+   Shared styling is in style.css
+   Reusable decorations are in components.css
+   ======================================== */
+
+.login-page {
+    min-height: 100vh;
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+/* Navigation */
+
+.login-navbar {
+    position: relative;
+    z-index: 2;
+    padding: 18px 0;
+    border-bottom: 2px dashed #E8DFAF;
+    background: rgba(253, 251, 240, 0.94);
+}
+
+.login-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.login-nav-link {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.login-nav-link span {
+    margin-left: 4px;
+    color: #B56A2D;
+}
+
+.login-nav-link:hover {
+    color: #B56A2D;
+}
+
+/* Page layout */
+
+.login-main {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 82px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 18px 25px;
+}
+
+.login-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 440px;
+    overflow: hidden;
+    border: 2px solid #EEE4B8;
+    border-radius: 30px;
+    background: var(--white);
+    box-shadow: 0 12px 0 rgba(221, 200, 78, 0.22);
+}
+
+/* Illustration */
+
+.login-illustration {
+    position: relative;
+    display: flex;
+    min-height: 175px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--butter);
+}
+
+/* Reusable blob component */
+
+.login-sun {
+    position: absolute;
+    top: -72px;
+    left: 50%;
+    width: 260px;
+    height: 220px;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Reusable duck component */
+
+.login-duck {
+    position: relative;
+    z-index: 2;
+    width: 115px;
+    height: 110px;
+    flex-shrink: 0;
+    transform: rotate(-5deg);
+}
+
+/* Keep the reusable duck correctly sized inside the wrapper */
+
+.login-duck .tp-duck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.05);
+    transform-origin: top left;
+}
+
+/* Reusable flower component */
+
+.login-flower {
+    position: absolute;
+    z-index: 2;
+    top: 23px;
+    left: 40px;
+    transform: rotate(-12deg);
+}
+
+/* Sticker */
+
+.login-sticker {
+    position: absolute;
+    z-index: 2;
+    right: 19px;
+    bottom: 20px;
+    padding: 8px 12px;
+    border: 1px dashed #D9A99B;
+    background: #F8DEDA;
+    color: #9A5C50;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transform: rotate(5deg);
+}
+
+/* Form content */
+
+.login-card-content {
+    padding: 30px 34px 27px;
+}
+
+.login-eyebrow {
+    margin-bottom: 10px;
+    color: #A36E29;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+    color: var(--dark);
+    font-size: 39px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-card h1 span {
+    color: #B56A2D;
+}
+
+.login-description {
+    max-width: 310px;
+    margin: 0 auto 25px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Form fields */
+
+.login-card .form-label {
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.login-card .form-control {
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1.5px solid #E8DFC2;
+    border-radius: 13px;
+    background: #FFFEF9;
+    color: var(--dark);
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.login-card .form-control::placeholder {
+    color: #AAA394;
+    font-weight: 600;
+}
+
+.login-card .form-control:focus {
+    border-color: #D6BE4B;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(242, 225, 106, 0.25);
+}
+
+.login-card .form-control.is-invalid {
+    border-color: #D96C67;
+}
+
+.login-card .invalid-feedback {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Login button */
+
+.login-submit {
+    min-height: 49px;
+    font-size: 15px;
+}
+
+.login-submit span {
+    display: inline-block;
+    font-size: 19px;
+    transition: transform 0.2s ease;
+}
+
+.login-submit:hover span {
+    transform: translateX(4px);
+}
+
+/* Messages */
+
+#message:not(:empty) {
+    margin-bottom: 17px;
+    padding: 11px 13px;
+    border-radius: 11px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Register link and footer */
+
+.login-register {
+    margin: 22px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-register a {
+    color: #A65F28;
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.login-register a:hover {
+    color: var(--coral);
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    color: #8B806A;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.login-divider span {
+    color: var(--coral);
+}
+
+.login-footer-note {
+    margin: 27px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.login-footer-note span {
+    color: var(--coral);
+}
+
+/* Reusable sparkles */
+
+.login-sparkle {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sparkle-left {
+    top: 16%;
+    left: calc(50% - 310px);
+    transform: rotate(-12deg);
+}
+
+.sparkle-right {
+    right: calc(50% - 310px);
+    bottom: 19%;
+    transform: rotate(12deg);
+}
+
+/* Responsive layout */
+
+@media (max-width: 575.98px) {
+    .login-navbar {
+        padding: 14px 0;
+    }
+
+    .login-navbar .brand {
+        font-size: 24px;
+    }
+
+    .login-navbar .brand-icon {
+        font-size: 23px;
+    }
+
+    .login-main {
+        min-height: calc(100vh - 70px);
+        padding: 30px 15px 20px;
+    }
+
+    .login-card {
+        max-width: 400px;
+        border-radius: 25px;
+    }
+
+    .login-illustration {
+        min-height: 150px;
+    }
+
+    .login-card-content {
+        padding: 27px 22px 24px;
+    }
+
+    .login-card h1 {
+        font-size: 34px;
+    }
+
+    .login-sticker {
+        right: 10px;
+        bottom: 13px;
+        font-size: 8px;
+    }
+
+    .login-flower {
+        left: 20px;
+    }
+
+    .sparkle-left {
+        top: 5%;
+        left: 4%;
+    }
+
+    .sparkle-right {
+        right: 4%;
+        bottom: 7%;
+    }
+}
